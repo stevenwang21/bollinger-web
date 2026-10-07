@@ -1,0 +1,164 @@
+/* Starry Korean v6.9.1 — supplied photograph, warm cream and muted pastels.
+   Color contract: up / bullish / buy = red; down / bearish / sell = green. */
+:root{
+  --bg:#f7f4ef;--panel:#f3eee7;--panel2:#eee8df;--chart-bg:#f7f4ef;
+  --line:#d3cfc6;--text:#35423e;--muted:#626f68;--accent:#947044;--gold:#947044;
+  --mint:#aa5266;--up:#aa5266;--down:#3e705b;--rose:#aa5266;--blue:#5b788c;--purple:#7b668a;
+  --sage-surface:#e1e9e0;--rose-surface:#efdee1;--blue-surface:#dfe8ee;--lavender-surface:#e8e1ed;--peach-surface:#eee3d3;
+  --radius:20px;color-scheme:light
+}
+html,body{background:#f7f4ef!important;color:var(--text)!important}
+body{background-image:radial-gradient(circle at 10% -10%,#253552 0,transparent 31%),radial-gradient(circle at 93% 2%,#3b302233 0,transparent 24%)!important;background-attachment:fixed!important}
+a{color:#947044!important}a:hover{color:#F1D89D!important}
+button,input,select,textarea,summary{color-scheme:light}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline-color:#947044!important}
+
+/* App chrome */
+header{background:linear-gradient(135deg,#f4eee6 0%,#f3eee7 70%,#24271F 130%)!important;border-bottom:1px solid #3D4658!important;box-shadow:0 14px 40px #0b1b2c66!important}
+header h1,header h1 span{color:#35423e!important}header h1 small{color:#947044!important}.brandMark{background:#947044!important;color:#f7f4ef!important;box-shadow:0 0 0 1px #E3C79344,0 8px 22px #0007!important}
+.workspaceNav{background:#eee8e0!important;border:1px solid #2F3A4E!important}.workspaceNav button{color:#626f68!important}.workspaceNav button:hover{background:#263247!important;color:#35423e!important}.workspaceNav button[aria-selected=true],#viewTab_screen[aria-selected=true],#viewTab_radar[aria-selected=true],#viewTab_candidates[aria-selected=true]{background:#f3eee7!important;color:#486450!important;box-shadow:inset 0 0 0 1px #94704466,0 4px 12px #0006!important}
+.btn{background:#f4eee6!important;color:#43524a!important;border:1px solid #d2cdc3!important}.btn:hover{background:#26344A!important;border-color:#6D7380!important}.btn.primary{background:linear-gradient(135deg,#947044,#A88754)!important;color:#101723!important;border-color:#DCC38D!important;box-shadow:0 5px 18px #0005!important}.btn.primary:hover{background:linear-gradient(135deg,#D2B77E,#B2915C)!important}
+.utilityMenu>summary,.sourceDetails>summary,.strategyMeta>summary{background:#eee8e0!important;color:#55665e!important;border:1px solid #d3cfc6!important}.utilityContent,.sourceDetails[open]>#marketDataPanel,.strategyMeta[open]>#strategyNotice{background:#f5f0ea!important;border:1px solid #d2cdc3!important;box-shadow:0 22px 52px #0008!important;color:#43524a!important}.connectionChip{background:#e5ece5!important;color:#947044!important;border:1px solid #54482F!important}
+input,select,textarea,.ssaInput{background:#fffcf7!important;color:#35423e!important;border:1px solid #cecac1!important;box-shadow:inset 0 1px 0 #ffffff08!important}input::placeholder,textarea::placeholder{color:#7c857d!important}select option{background:#f7f4ef!important;color:#35423e!important}input[type=checkbox]{accent-color:#947044!important}
+#qualityInfo{background:#eee8e0!important;border:1px solid #d2cdc3!important;box-shadow:0 9px 25px #0005!important}.qualityLabel{color:#947044!important}.qualitySummary,.qualityDetails,#qualityInfo>details>summary,.qualitySummary>span:last-child{color:#626f68!important}
+.workspaceView{background:transparent!important}.viewIntro h2,.ssaHead>b{color:#35423e!important}.viewIntro p,.ssaStatus,#ssaMsg,.eyebrow{color:#626f68!important}.eyebrow{color:#947044!important}.introAside{border-color:#4A5262!important;color:#626f68!important}.introAside b{color:#947044!important}
+footer{color:#8F9BAE!important;border-color:#d3cfc6!important}
+
+/* Screener */
+main aside,#listPane,#chartPane{border:1px solid #d3cfc6!important;box-shadow:0 15px 34px #46584d55!important}main aside{background:#eee8df!important}#listPane{background:#f5f0ea!important}#chartPane{background:#f7f4ef!important}aside h3,.filterSection>summary{color:#947044!important}.row label,.hint{color:#626f68!important}
+.stage,.ruleGroup{background:#f5f0ea!important;color:#626f68!important;border:1px solid transparent!important}.stage.on,.ruleGroup.on{background:#24283A!important;color:#947044!important;box-shadow:inset 0 0 0 1px #94704455!important}.ruleGroup small,.stage small{color:#68746d!important}.ruleGroup b.cnt{color:#947044!important}
+#listHead,#chartHead{background:#f3eee7!important;border-color:#d2cdc3!important}#listHead b,#chartHead .nm,.chartIdentity{color:#35423e!important}#listCount,#chartInfo,.chartMeta,#why{color:#626f68!important}#chartInfo,.chartEmpty{background:#f7f4ef!important}.chartEmpty b{color:#947044!important}.emptyMark{color:#947044!important}
+th{background:#e9e3db!important;color:#55665e!important;border-color:#d2cdc3!important}td{background:#f5f0ea!important;color:#43524a!important;border-color:#ddd7cf!important}tbody tr:hover td{background:#e9e3db!important}tbody tr.sel td{background:#e2e9e1!important;box-shadow:inset 3px 0 #947044!important}.code{color:#5b788c!important}.star{color:#7c857d!important}.star.on{color:#947044!important}
+.tag{border:1px solid #c7c9c2!important}.tag.group-M{color:#947044!important;background:#eee5d5!important}.tag.group-A,.tag.group-B,.tag.data-OK{color:#aa5266!important;background:#f1dfe4!important}.tag.group-N,.tag.group-P,.tag.middleBreakout,.tag.K{color:#5b788c!important;background:#e0e9f0!important}.tag.group-H,.tag.group-D,.tag.data-Q3{color:#3e705b!important;background:#e2ece4!important}.tag.group-C,.tag.data-Q1,.tag.data-Q2{color:#7b668a!important;background:#e9e1f0!important}
+header #progressWrap,.radarScanStatus{background:#e1e9ed!important;color:#626f68!important;border:1px solid #324058!important}.radarScanStatus[data-state="warning"]{background:#eee2cf!important;color:#947044!important}.radarScanStatus[data-state="running"]{background:#f0e1e4!important;color:#aa5266!important}.radarFailures{color:#7b668a!important}#middleBreakoutEvidence{background:#e3eaf0!important;color:#626f68!important;border:1px solid #d2cdc3!important}#middleBreakoutEvidence b{color:#947044!important}#middleBreakoutEvidence small{color:#68746d!important}
+
+/* Individual-stock research */
+#singleStockAnalyzer{background:transparent!important;color:#35423e!important}.ssaHead>b>span{color:#947044!important}#ssaMsg{background:#eee8e0!important;border:1px solid #d3cfc6!important;color:#626f68!important}.ssaWelcome{background:#f5f0ea!important;border:1px solid #d3cfc6!important}.ssaWelcome h3{color:#35423e!important}.welcomeSteps{color:#626f68!important}.welcomeSteps b{background:#947044!important;color:#f7f4ef!important}.ssaMatch{background:#eee8e0!important;color:#43524a!important;border:1px solid #d2cdc3!important}.ssaMatch:hover{background:#dfe6df!important}
+.ssaCards{grid-template-columns:repeat(8,minmax(105px,1fr))!important}.ssaCard{background:linear-gradient(155deg,#f3eee7,#f5f0ea)!important;border:1px solid #d3cfc6!important;box-shadow:0 9px 22px #46584d55!important}.ssaCard:nth-child(n){background:linear-gradient(155deg,#f3eee7,#f5f0ea)!important}.ssaCard:nth-child(4){border-color:#caba9e!important;box-shadow:inset 0 0 0 1px #94704422,0 9px 22px #46584d55!important}.ssaCard small{color:#68746d!important}.ssaCard b{color:#35423e!important}.ssaCard:nth-child(2) b{color:#947044!important}
+.ssaChartBox,.ssaAnalyst,.ssaSOP,.ssaBlock,.ssaImagePanel{background:#f5f0ea!important;border:1px solid #d3cfc6!important;box-shadow:0 14px 34px #46584d55!important}.ssaChartBox{background:#f7f4ef!important}.ssaChartBox>div:first-child{background:#f3eee7!important;border-color:#d3cfc6!important;color:#43524a!important}.ssaInfo,.ssaLegend{background:#f7f4ef!important;color:#626f68!important;border-color:#ddd7cf!important}.singleJump a,.chartLayerToggle{color:#947044!important}
+.ssaAnalyst{background:linear-gradient(145deg,#f3eee7,#f0e9e1)!important}.analystTitle h4,.sopHead h4,.ssaBlock h4{color:#35423e!important}.analystTitle p{color:#626f68!important}.analystEyebrow{color:#947044!important}.analystDecision,.smcBadge,.smcSignal{background:#e9e3db!important;border:1px solid #d2cdc3!important;color:#43524a!important}.analystDecision.buy,.sopDecision.buy{background:#f1dfe4!important;color:#aa5266!important;border-color:#cda5b0!important}.analystDecision.sell,.sopDecision.sell{background:#e2ece4!important;color:#3e705b!important;border-color:#a7c1af!important}.analystDecision.wait,.sopDecision.wait{background:#eee5d5!important;color:#947044!important;border-color:#caba9e!important}.analystDecision.hot,.sopDecision.hot{background:#eee2cf!important;color:#947044!important;border-color:#caba9e!important}
+.analystCell,.analystSummary,.analystForecast,.sopGate,.sopTrade>div,.smcIndexCard,.smcKeyCell,.smcLegendCell,.dailyBiasCell,.dailyBiasAlign>div{background:#fcf8f1!important;border:1px solid #d3cfc6!important;color:#43524a!important}.analystCell small,.analystSummary small,.analystForecast small,.sopGate small,.sopTrade small,.smcIndexCard small,.smcKeyCell small,.dailyBiasCell small,.dailyBiasAlign small{color:#68746d!important}.analystCell strong,.sopTrade b,.dailyBiasCell strong{color:#35423e!important}.analystNote,.sopOneLine,.sopGuard,.dailyBiasLogic{background:#eee8df!important;color:#626f68!important;border-color:#947044!important}.analystNote b,.sopGuard b{color:#947044!important}
+.sopGate.good{border-color:#cda5b0!important;background:#f2e3e6!important}.sopGate.good strong,.ssaGood,.smcBull{color:#aa5266!important}.sopGate.bad{border-color:#a7c1af!important;background:#e7efe6!important}.sopGate.bad strong,.ssaBad,.smcBear{color:#3e705b!important}.sopGate.warn{border-color:#caba9e!important;background:#eee5d5!important}.sopGate.warn strong,.ssaWarn,.smcNeutral{color:#947044!important}.ssaNeutral{color:#68746d!important}
+.dailyBiasBlock{background:linear-gradient(145deg,#f5f0ea 0%,#f2ece5 63%,#eee3d3 140%)!important;border-color:#caba9e!important}.dailyBiasHead h4{color:#43524a!important}.dailyBiasBadge{background:#f4eee6!important;border-color:#c7c9c2!important}.dailyBiasBadge.bull{color:#aa5266!important;border-color:#cda5b0!important}.dailyBiasBadge.bear{color:#3e705b!important;border-color:#a7c1af!important}.dailyBiasBadge.neutral{color:#947044!important;border-color:#caba9e!important}.dailyBiasLogic{box-shadow:inset 0 0 26px #94704408!important}.dailyBiasFoot{color:#68746d!important}
+.smcIndexCard.good,.smcKeyCell.good{border-color:#cda5b0!important}.smcIndexCard.bad,.smcKeyCell.bad{border-color:#a7c1af!important}.smcIndexCard.warn,.smcKeyCell.warn{border-color:#caba9e!important}
+.definitionGuide{background:#f5f0ea!important;border:1px solid #d3cfc6!important}.definitionGuide>summary{color:#947044!important}.definitionBody{color:#626f68!important}
+
+/* Radar / candidates */
+.radarToolbar{background:transparent!important}.radarStats>div,.radarCoverage,.radarNotice,#recommendationPanel,#trackingValidationPanel,#recommendationChartPanel{background:#f5f0ea!important;border:1px solid #d3cfc6!important;box-shadow:0 12px 30px #46584d55!important}.radarStats>div:nth-child(n){background:#f5f0ea!important}.radarStats>div b{color:#35423e!important}.radarStats>div small,.radarCoverage,.radarNotice{color:#626f68!important}.radarStats>div:nth-child(1) b{color:#aa5266!important}.radarStats>div:nth-child(2) b{color:#947044!important}.radarStats>div:nth-child(3) b{color:#5b788c!important}.radarStats>div:nth-child(4) b{color:#7b668a!important}.radarTableWrap{border:1px solid #d3cfc6!important;background:#f5f0ea!important}.candidateCard,.trackCard{background:#fcf8f1!important;border-color:#d3cfc6!important}.trackColumns,.trackStatus,.trackPrice small,.trackMeta,.trackStock span{color:#68746d!important}.isUp,.up,.trackMove.isUp{color:#aa5266!important}.isDown,.dn,.trackMove.isDown{color:#3e705b!important}
+
+/* Dialogs / export */
+dialog{background:#f5f0ea!important;color:#43524a!important;border:1px solid #c7c9c2!important;box-shadow:0 28px 90px #000A!important}dialog::backdrop{background:#0b1b2caa!important;backdrop-filter:blur(8px)}dialog h2{color:#947044!important}.riskPanel,.dailyExplain,.recChartInfo{color:#626f68!important}
+.skipLink,.filterToggle{background:#947044!important;color:#f7f4ef!important}
+
+/* Explicit Taiwan-market semantic colors: bullish/buy = red, bearish/sell = green. */
+[data-trend="up"],.trendUp,.buyPoint,.bullish,.signalBuy{color:#aa5266!important}
+[data-trend="down"],.trendDown,.sellPoint,.bearish,.signalSell{color:#3e705b!important}
+
+@media(max-width:1100px){.ssaCards{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+@media(max-width:700px){.ssaCards{grid-template-columns:repeat(2,minmax(0,1fr))!important}.dailyBiasGrid{grid-template-columns:1fr!important}}
+.dbCell{display:inline-flex;align-items:center;justify-content:center;min-width:48px;padding:3px 7px;border-radius:999px;font-size:12px;font-weight:750;border:1px solid #c7c9c2;background:#f0e9e0}.dbCell.bull{color:#aa5266;border-color:#cda5b0;background:#f1dfe4}.dbCell.bear{color:#3e705b;border-color:#a7c1af;background:#e7efe6}.dbCell.neutral{color:#947044;border-color:#caba9e;background:#eee5d5}
+
+
+/* Photograph and Korean palette: opaque charts keep price lines readable. */
+:root{
+  --bg:#102640;--panel:rgba(249,246,240,.95);--panel2:#f0eae1;
+  --chart-bg:#f7f4ef;--line:#d3cfc6;--text:#35423e;--muted:#626f68;
+  --accent:#5c7465;--gold:#947044;--champagne:#ead4ac;
+  --up:#aa5266;--down:#3e705b;--mint:#3e705b;--rose:#aa5266;
+  --blue:#5b788c;--purple:#7b668a;--sage-surface:#e2ebe3;
+  --rose-surface:#f0dfe3;--blue-surface:#e0e8ef;
+  --lavender-surface:#e8e1ee;--peach-surface:#eee2d2;color-scheme:light
+}
+html{background:#102640!important}
+html body{
+  background-color:#102640!important;
+  background-image:linear-gradient(rgba(8,23,39,.19),rgba(8,23,39,.28)),url('/assets/starry-sky.jpg')!important;
+  background-position:center,center 56%!important;background-size:cover,cover!important;
+  background-repeat:no-repeat!important;background-attachment:fixed,fixed!important;
+  min-height:100dvh;color:var(--text)!important;font-variant-numeric:tabular-nums
+}
+header{
+  background:rgba(13,31,48,.86)!important;border-bottom:1px solid #ead4ac35!important;
+  box-shadow:0 10px 32px #081c3426!important;backdrop-filter:blur(12px)
+}
+header h1,header h1>span,header h1 small{color:var(--champagne)!important}
+header h1{letter-spacing:.015em!important}
+header h1 small{letter-spacing:.18em!important;opacity:.88}
+.brandMark{background:#ead4ac!important;color:#314639!important;box-shadow:none!important}
+.workspaceNav{background:rgba(247,242,233,.96)!important;border:1px solid #e7ddcb!important}
+.workspaceNav button{color:#56645c!important}
+.workspaceNav button:hover{background:#e7eae0!important;color:#35423e!important}
+.workspaceNav button[aria-selected=true]{background:#e0e8ef!important;color:#466176!important;box-shadow:0 2px 7px #46584d12!important}
+#viewTab_screen[aria-selected=true]{background:#eddce0!important;color:#75545e!important}
+#viewTab_radar[aria-selected=true]{background:#dce8dd!important;color:#4a6856!important}
+#viewTab_candidates[aria-selected=true]{background:#e6deec!important;color:#756182!important}
+.btn{background:#f4eee4!important;color:#465a4d!important;border-color:#cccbbb!important;box-shadow:none!important}
+.btn:hover{background:#e4eadf!important;border-color:#9fae9f!important}
+.btn.primary,.btn.primary:hover{background:#5c7465!important;color:#fffaf0!important;border-color:#5c7465!important;box-shadow:0 4px 14px #16302b16!important}
+.btn.primary:hover{background:#4b6656!important}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #a7bbab!important;outline-offset:3px}
+header .utilityMenu>summary{background:#f0e8dc!important;color:#56664f!important}
+input,select,textarea,.ssaInput{background:#fffcf7!important;color:#35423e!important;border-color:#cecac1!important;box-shadow:none!important}
+select option{background:#fffcf7!important;color:#35423e!important}
+input::placeholder,textarea::placeholder{color:#707e74!important}
+input[type=checkbox]{accent-color:#5c7465!important}
+#qualityInfo{background:rgba(246,236,217,.96)!important;border-color:#d8cdb8!important;box-shadow:0 8px 24px #081c3414!important}
+.viewIntro h2,.ssaHead>b,.ssaHead>b>span,.eyebrow,.analystEyebrow{color:var(--champagne)!important}
+.viewIntro p,.ssaHead .ssaStatus,.ssaStatus,.introAside{color:#e1e8eb!important;text-shadow:0 1px 8px #081c3440}
+.introAside{border-color:#ead4ac66!important}.introAside b{color:#ead4ac!important}
+.ssaHead .singleJump a{color:#ead4ac!important}
+main aside,#listPane{background:rgba(249,246,240,.95)!important}
+#chartPane,.ssaChartBox,#chartInfo,.ssaInfo,.ssaLegend,.chartEmpty{background:#f7f4ef!important}
+#listHead,#chartHead,.ssaChartBox>div:first-child{background:#ece7de!important}
+.ssaWelcome,.ssaAnalyst,.ssaSOP,.ssaBlock,.ssaImagePanel,.definitionGuide,
+.radarCoverage,.radarNotice,#recommendationPanel,#trackingValidationPanel,#recommendationChartPanel,
+.radarTableWrap{background:rgba(249,246,240,.95)!important;box-shadow:0 10px 26px #081c341c!important}
+.ssaWelcome h3,.analystTitle h4,.sopHead h4,.ssaBlock h4,.ssaImageHead h4,
+.dailyBiasHead h4,.ssaChartBox>div:first-child,.chartEmpty b{color:#947044!important}
+.ssaCards{gap:12px!important}
+.ssaCard,.ssaCard:nth-child(n){background:#f3ede3!important;box-shadow:0 5px 16px #081c3414!important;border-color:#d6cec0!important}
+.ssaCard:nth-child(1){background:#f1dfe3!important}.ssaCard:nth-child(2){background:#e1ebe2!important}
+.ssaCard:nth-child(3){background:#e0e9ef!important}.ssaCard:nth-child(4){background:#eee3d0!important}
+.ssaCard:nth-child(5){background:#e8e1ed!important}.ssaCard:nth-child(6){background:#e3eae2!important}
+.radarStats>div,.radarStats>div:nth-child(n){background:#e2ebe3!important;box-shadow:0 6px 18px #081c3414!important}
+.radarStats>div:nth-child(1){background:#f0dfe3!important}.radarStats>div:nth-child(2){background:#eee3d0!important}
+.radarStats>div:nth-child(3){background:#e0e9ef!important}.radarStats>div:nth-child(4){background:#e8e1ed!important}
+.radarStats>div small,.radarCoverage,.radarNotice{color:#626f68!important}
+.stage.on,.ruleGroup.on{background:#e2ebe3!important;color:#486450!important;box-shadow:inset 0 0 0 1px #b6c8b5!important}
+.stage small,.ruleGroup small{color:#626f68!important}
+td{background:rgba(249,246,240,.95)!important}th{background:#e9e4dc!important;color:#53645b!important}
+tbody tr:hover td{background:#ecebe2!important}tbody tr.sel td{background:#e2e9df!important;box-shadow:inset 3px 0 #869c88!important}
+.analystCell,.analystSummary,.analystForecast,.sopGate,.sopTrade>div,.smcIndexCard,.smcKeyCell,
+.smcLegendCell,.dailyBiasCell,.dailyBiasAlign>div{background:#fcf8f1!important;color:#43524a!important}
+.analystCell strong,.sopTrade b,.dailyBiasCell strong{color:#35423e!important}
+.dailyBiasBlock{background:rgba(247,242,232,.97)!important;border-color:#caba9e!important}
+.smcSlide{background:#eee9e2!important;border-color:#d3cfc6!important}
+.smcSlide h5{color:#5b788c!important}.smcPlain{background:#f7f4ef!important;color:#626f68!important}
+.ssaPosterFrame,.ssaPosterEmpty{background:#f7f4ef!important;color:#626f68!important;border-color:#d3cfc6!important}
+.ssaPosterMode button{background:#ece5db!important;color:#626f68!important;border-color:#d3cfc6!important}
+.ssaPosterMode button.active{background:#5c7465!important;color:#fffaf0!important}
+.ssaPosterMeta,.ssaImageHint,.riskPanel,.dailyExplain,.recChartInfo{color:#626f68!important}
+.ssaGood,.smcBull,.sopGate.good strong,.isUp,.up,.trackMove.isUp{color:#aa5266!important}
+.ssaBad,.smcBear,.sopGate.bad strong,.isDown,.dn,.trackMove.isDown{color:#3e705b!important}
+.sopGate.good{background:#f2e3e6!important}.sopGate.bad{background:#e7efe6!important}.sopGate.warn{background:#eee5d5!important}
+.ssaWarn,.smcNeutral{color:#947044!important}
+footer{background:rgba(247,242,233,.95)!important;color:#626f68!important;border-color:#d3cfc6!important;border-radius:14px;padding:15px 20px!important}
+dialog{background:#f9f6f0!important;color:#35423e!important;box-shadow:0 28px 90px #081c3455!important}
+dialog::backdrop{background:#081c3477!important}
+.skipLink,.filterToggle{background:#ead4ac!important;color:#314639!important}
+@media(max-width:700px){
+  html body{background-position:center,center 56%!important}
+  .ssaCards{gap:9px!important}.ssaHead>b{font-size:27px!important}
+  header h1{font-size:23px!important}.viewIntro h2{font-size:29px!important}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Readable deep champagne on cream surfaces. */
+main aside h3,.filterSection>summary,.ssaCard:nth-child(2) b{color:#947044!important}
+
+@media(max-width:700px){
+  .frameworkLayers{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .frameworkLayer{min-width:0!important;overflow-wrap:anywhere}
+  .frameworkLayer:last-child{grid-column:1/-1}
+  .utilityMenu .utilityContent{left:0!important;right:auto!important;width:min(340px,calc(100vw - 32px))!important;max-width:calc(100vw - 32px)!important}
+}

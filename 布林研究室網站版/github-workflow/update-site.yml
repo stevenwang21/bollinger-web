@@ -1,0 +1,64 @@
+name: 每日更新布林選股網站
+
+on:
+  schedule:
+    # 台灣時間 週一～週五 14:40 與 17:40（GitHub 排程時間是 UTC，可能延遲數十分鐘）
+    - cron: "40 6 * * 1-5"
+    - cron: "40 9 * * 1-5"
+  workflow_dispatch:   # 可在 Actions 頁面手動按「Run workflow」立即更新
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 保留上一次抓到的日K，下次只做增量更新（第一次使用 repo 內附的 9/18 快取）
+      - name: 還原資料快取
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: market-cache-${{ github.run_id }}
+          restore-keys: market-cache-
+
+      - name: 抓最新資料並產生網站
+        env:
+          TZ: Asia/Taipei
+        run: python build_site.py
+
+      - name: 儲存資料快取
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cache
+          key: market-cache-${{ github.run_id }}
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

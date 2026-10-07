@@ -1,0 +1,16 @@
+/* 網站版：隱藏只在本機程式才有作用的控制項，並加上網站版標示 */
+.web-edition #btnQuit,
+.web-edition .sourceDetails,
+.web-edition #marketDataPanel,
+.web-edition #researchPrepare,
+.web-edition #mdLive,
+.web-edition #mdSave{display:none!important}
+#webBadge{display:inline-flex;align-items:center;gap:8px;padding:4px 12px;border-radius:999px;
+  background:#5B4B8A;color:#F7F5FB;font-size:14px;line-height:1.4;white-space:nowrap}
+#webBadge b{font-weight:700;letter-spacing:.5px}
+#webBadge span{opacity:.85}
+#webNotice{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);max-width:min(560px,calc(100vw - 32px));
+  padding:12px 18px;border-radius:14px;background:#29243A;color:#F7F5FB;font-size:15px;line-height:1.5;
+  box-shadow:0 10px 30px rgba(41,36,58,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:9999}
+#webNotice.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width:600px){#webBadge span{display:none}}
