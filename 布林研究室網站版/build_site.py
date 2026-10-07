@@ -33,6 +33,26 @@ import marketdata_r9 as md9  # noqa: E402
 import market_calendar as calendar  # noqa: E402
 
 
+_real_http_get = app.http_get
+
+
+def _http_get_with_retry(url, timeout=20):
+    """官方公司清單檔較大，海外主機常被中途斷線：清單網址改為最多重試 4 次、放寬逾時。"""
+    if "openapi" not in url:
+        return _real_http_get(url, timeout=timeout)
+    last = None
+    for attempt in range(4):
+        try:
+            return _real_http_get(url, timeout=max(timeout, 45))
+        except Exception as e:  # IncompleteRead、逾時等
+            last = e
+            time.sleep(3 * (attempt + 1))
+    raise last
+
+
+app.http_get = _http_get_with_retry
+
+
 def log(*a):
     print(datetime.now(app.TPE).strftime("%H:%M:%S"), *a, flush=True)
 
