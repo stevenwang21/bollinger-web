@@ -22,6 +22,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    # 程式檔放在 repo 的「布林研究室網站版」子資料夾
+    defaults:
+      run:
+        working-directory: 布林研究室網站版
     steps:
       - uses: actions/checkout@v4
 
@@ -33,7 +37,7 @@ jobs:
       - name: 還原資料快取
         uses: actions/cache/restore@v4
         with:
-          path: cache
+          path: 布林研究室網站版/cache
           key: market-cache-${{ github.run_id }}
           restore-keys: market-cache-
 
@@ -46,12 +50,12 @@ jobs:
         if: always()
         uses: actions/cache/save@v4
         with:
-          path: cache
+          path: 布林研究室網站版/cache
           key: market-cache-${{ github.run_id }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: 布林研究室網站版/_site
 
   deploy:
     needs: build
